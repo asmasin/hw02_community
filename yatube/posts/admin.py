@@ -8,7 +8,10 @@ class PostAdmin(admin.ModelAdmin):
         'text',
         'group',
         'pub_date',
-        'author'
+        'author',
+    )
+    list_editable = (
+        'group',
     )
     search_fields = (
         'text',
@@ -24,7 +27,7 @@ class GroupAdmin(admin.ModelAdmin):
         'pk',
         'title',
         'slug',
-        'description'
+        'description',
     )
     search_fields = (
         'title',
