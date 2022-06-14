@@ -4,7 +4,7 @@
 <div class="container">
     <h1>{{ group }}</h1>
     <p>{{ group.description }}</p>
-    {% for post in posts %}
+    {% for post in page_obj %}
     <article>
         {% include 'includes/post.html' %}
         {% if not forloop.last %}
@@ -12,5 +12,6 @@
         {% endif %}
     </article>
     {% endfor %}
+    {% include 'includes/paginator.html' %}
 </div>
 {% endblock %}

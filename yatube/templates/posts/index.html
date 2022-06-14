@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
   <h1>Последние обновления на сайте</h1>
-  {% for post in posts %}
+  {% for post in page_obj %}
   <article>
     {% include 'includes/post.html' %}
     {% if post.group %}
@@ -14,5 +14,6 @@
     {% endif %}
   </article>
   {% endfor %}
+  {% include 'includes/paginator.html' %}
 </div>
 {% endblock %}
