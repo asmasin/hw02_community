@@ -4,6 +4,13 @@
 <div class="container">
     <h1>{{ group }}</h1>
     <p>{{ group.description }}</p>
-    {% include 'includes/post.html' %}
+    {% for post in posts %}
+    <article>
+        {% include 'includes/post.html' %}
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </article>
+    {% endfor %}
 </div>
 {% endblock %}
