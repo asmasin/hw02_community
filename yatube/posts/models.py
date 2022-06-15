@@ -17,7 +17,7 @@ class Group(models.Model):
     )
     slug = models.SlugField(
         unique=True,
-        verbose_name='Slug-строка'
+        verbose_name='Slug-строка',
     )
     description = models.TextField(
         verbose_name='Описание',
@@ -58,4 +58,4 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = ['-pub_date']
+        ordering = '-pub_date',

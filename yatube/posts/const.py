@@ -1,1 +1,1 @@
-cnt_posts = 10
+POST_COUNT = 10
